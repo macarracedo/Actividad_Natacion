@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:vistas="clr-namespace:Actividad_Natacion.Vistas"
+        x:Class="Actividad_Natacion.Vistas.VGrafica"
+        Title="Grafica"
+        Width="1000"
+        Height="600">
+        <DockPanel
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch">
+                
+                <StackPanel
+                        DockPanel.Dock="Bottom"
+                        Margin="5">
+                        <DockPanel>
+                                <RadioButton Content="Bars" Name="RbBars" Width="100"/>
+                                <RadioButton Content="Line" Name="RbLine" Width="100" IsChecked="true" />
+                        </DockPanel>
+                        <DockPanel>
+                                <RadioButton Content="Meses" Name="RbMeses" Width="100" />
+                                <RadioButton Content="Dias" Name="RbDias" Width="100" IsChecked="true" />
+                        </DockPanel>
+                </StackPanel>
+                <StackPanel
+                        DockPanel.Dock="Top"
+                        Margin="5">
+                        <DockPanel
+                                Margin="5"
+                                Height="230"
+                                Width="700">
+                                <vistas:Chart
+                                        Name="ChGrfMin"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch" />
+                        </DockPanel>
+                        <DockPanel
+                                Margin="5"
+                                Height="230"
+                                Width="700">
+                                <vistas:Chart
+                                        Name="ChGrfMetros"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch" />
+                        </DockPanel>        
+                </StackPanel>
+                <Button Name="btExit" Content="Volver"/>
+        </DockPanel>
+</Window>

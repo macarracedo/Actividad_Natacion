@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 
-namespace Actividad_Natacion
+namespace Actividad_Natacion.Vistas
 {
     public class App : Application
     {

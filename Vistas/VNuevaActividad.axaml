@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Actividad_Natacion.Vistas.VNuevaActividad"
+        Title="Nueva Actividad"
+        Height="500"
+        Width="800"
+        MaxWidth="800">
+        <StackPanel Margin="7"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+            
+            
+            
+            <DockPanel Margin="5">
+                <Label Margin="5" Width="150" >Duración (en minutos)</Label>
+                <TextBox Name="tbDuracion"></TextBox>
+            </DockPanel>
+            
+            <DockPanel Margin="5" IsVisible="False">
+                <Label Margin="5" Width="150" Content="Duracion" HorizontalAlignment="Left"/>
+                <TextBox Name="tbDuracionHoras" Watermark="horas" Width="60"/>
+                <Label Margin="6" Content=":"/>
+                <TextBox Name="tbDuracionMinutos" Watermark="minutos" Width="60"/>
+            </DockPanel>
+            
+            <DockPanel Margin="5">
+                <Label Margin="5" Width="150" >Distancia (metros)</Label>
+                <TextBox Name="tbDistancia"></TextBox>
+            </DockPanel>
+            
+            <DockPanel Margin="5">
+                <Label Margin="5" Width="150" >Circuito</Label>
+                <NumericUpDown 
+                    Name="nudCircuito" 
+                    Value="{Binding Circuito_MinValue}" 
+                    Minimum="{Binding Circuito_MinValue}" 
+                    Maximum="{Binding Circuito_MaxValue}"/>
+            </DockPanel>
+            
+            <DockPanel Margin="5">
+                <Label Margin="5" Width="150" Content="Notas: " HorizontalAlignment="Left"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBox Name="tbNotas" Height="140" TextWrapping="Wrap"
+                         Width="450"/>
+            </DockPanel>
+            
+            <DockPanel Margin="5">
+                <Label Margin="5" Width="150" >Fecha</Label>
+                <DatePicker Name="dpFecha"></DatePicker>
+            </DockPanel>
+            
+            <DockPanel Margin="15" HorizontalAlignment="Center">
+            <Button Name="btInsertarActividad" Content="Añadir actividad" />
+            </DockPanel>
+            <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Name="btExit" Content="Volver"/>
+    </StackPanel>
+</Window>

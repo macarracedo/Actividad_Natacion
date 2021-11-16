@@ -1,0 +1,121 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Actividad_Natacion.Vistas.VCalendario"
+        Title="Actividad_Natacion"
+        Height="500"
+        Width="800">
+
+    <StackPanel
+        Margin="7"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+        
+        <Label
+            Content="Vista de Calendario"
+            HorizontalAlignment="Center" 
+            Margin="5,5,5,20"/>
+        
+        <DockPanel
+            Margin="5">
+            <StackPanel
+                Margin="5"
+                DockPanel.Dock="Left"
+                HorizontalAlignment="Left">
+                <Calendar
+                    Name="Cal"
+                    SelectionMode="SingleDate"
+                    DataContext="actividades"
+                    BorderThickness="1" />
+            </StackPanel>
+            
+            <StackPanel
+                Margin="5"
+                DockPanel.Dock="Right"
+                HorizontalAlignment="Right"
+                Width="450">
+                <DockPanel
+                    Margin="5">
+                    <TextBox
+                        Name="tbDate"
+                        Text="No se ha seleccionado ningún día todavía." />
+                </DockPanel>
+
+                <DockPanel Margin="5"
+                           Name="InfoDuracion"
+                           IsVisible="False">
+                    <Label Margin="5" Width="150">Duración en minutos</Label>
+                    <TextBox Name="tbDuracion" IsReadOnly="True" />
+                </DockPanel>
+
+                <DockPanel Margin="5"
+                           Name="InfoDistancia"
+                           IsVisible="False">
+                    <Label Margin="5" Width="150">Distancia</Label>
+                    <TextBox Name="tbDistancia" IsReadOnly="True" />
+                </DockPanel>
+                
+                <DockPanel Margin="5"
+                           Name="InfoCircuito"
+                           IsVisible="False">
+                    <Label Margin="5" Width="150">Circuito</Label>
+                    <TextBox Name="tbCircuito" IsReadOnly="True" />
+                </DockPanel>
+                
+                <DockPanel Margin="5"
+                           Name="InfoFecha"
+                           IsVisible="False">
+                    <Label Margin="5" Width="150">Fecha</Label>
+                    <TextBox Name="tbFecha" IsReadOnly="True" />
+                </DockPanel>
+                
+                <DockPanel
+                    Margin="5"
+                    Name="InfoNotas1"
+                    IsVisible="False">
+                    <Label Margin="5" Width="150">Notas</Label>
+                    <TextBox Name="tbNotas" Height="50" IsReadOnly="True" TextWrapping="Wrap"/>
+                </DockPanel>
+                <DockPanel
+                    Margin="10">
+                    <Button 
+                        Name="btInsertar" 
+                        Content="Insertar"
+                        IsVisible="False"/>
+
+                    <Button
+                        Name="btModificar"
+                        Content="Modificar"
+                        IsVisible="False"/>
+                    <Button
+                        Name="btEliminar"
+                        Content="Eliminar"
+                        IsVisible="False"/>
+                </DockPanel>
+                <DockPanel
+                    Name="dpConfimacion"
+                    IsVisible="False">
+                    <DockPanel>
+                        <Label
+                            Content="Está a punto eliminar esta actividad. Qué desea hacer?"/>
+                    </DockPanel>
+                    
+                    <Button
+                        Name="btConfEliminar"
+                        Content="Eliminar"/>
+                    <Button
+                        Name="btConfCancelar"
+                        Content="Cancelar"/>
+                </DockPanel>
+                
+            </StackPanel>
+
+
+        </DockPanel>
+        
+        <Button Name="btExit" Content="Volver"/>
+
+    </StackPanel>
+</Window>

@@ -3,7 +3,43 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Actividad_Natacion.MainWindow"
-        Title="Actividad_Natacion">
-    Welcome to Avalonia!
+        x:Class="Actividad_Natacion.Vistas.MainWindow"
+        Title="Actividad_Natacion"
+        Width="400"
+        Height="300">
+        <StackPanel
+                Margin="5">
+            
+            <Menu
+                VerticalAlignment="Top">
+                <MenuItem Header="Archivo">
+                    <MenuItem Header="Cargar .xml" Name="OpCargar"></MenuItem>
+                    <MenuItem Header="Guardar .xml" Name="OpGuardar" />
+                    <MenuItem Header="Salir" Name="OpExit" />
+                </MenuItem>
+                <MenuItem Header="Editar">
+                    <MenuItem Header="Insertar" Name="OpInsertar" />
+                </MenuItem>
+            </Menu>
+            
+            <DockPanel>
+                <Label Content="Menu Principal:" 
+                       FontFamily="Ubuntu" 
+                       HorizontalAlignment="Center"/>
+            </DockPanel>
+            <DockPanel
+                Margin="5"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Center">
+                <Button
+                    Name = "btVCalendario"
+                    Content="Calendario"/>
+                <Button
+                    Name = "btVGrafica"
+                    Content="Gráfica"/>
+                <Button
+                    Name = "btVListado"
+                    Content="Listado"/>
+            </DockPanel>
+        </StackPanel>
 </Window>

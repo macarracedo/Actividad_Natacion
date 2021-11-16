@@ -3,7 +3,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
 
-namespace Actividad_Natacion
+namespace Actividad_Natacion.Vistas
 {
     class Program
     {

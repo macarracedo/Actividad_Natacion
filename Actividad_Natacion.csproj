@@ -12,14 +12,35 @@
     <PackageReference Include="Avalonia.Desktop" Version="0.10.8" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.8" />
+    <PackageReference Include="ScottPlot.Avalonia" Version="4.1.27" />
    </ItemGroup>
   <ItemGroup>
-    <Compile Update="Vistas\Calendario.axaml.cs">
+    <Compile Update="Vistas\VCalendario.axaml.cs">
       <DependentUpon>Calendario.axaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Vistas\MainWindow.axaml.cs">
       <DependentUpon>MainWindow.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\VNuevaActividad.axaml.cs">
+      <DependentUpon>VNuevaActividad.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\VInfoActividad.axaml.cs">
+      <DependentUpon>VInfoActividad.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\VGrafica.axaml.cs">
+      <DependentUpon>VGrafica.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\VListado.axaml.cs">
+      <DependentUpon>VListado.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\MessageWindow.axaml.cs">
+      <DependentUpon>MessageWindow.axaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

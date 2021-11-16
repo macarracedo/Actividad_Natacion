@@ -1,0 +1,44 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Actividad_Natacion.Vistas.VInfoActividad"
+        Title="Información Actividad"
+        Height="500"
+        Width="800"
+        MaxWidth="800">
+    <StackPanel
+        Margin="5">
+        
+
+        <DockPanel Margin="5">
+            <TextBox Name="tbDuracion" IsReadOnly="True" />
+        </DockPanel>
+
+        <DockPanel Margin="5">
+            <Label Margin="5" Width="150">Distancia</Label>
+            <TextBox Name="tbDistancia" IsReadOnly="True" />
+        </DockPanel>
+
+        <DockPanel Margin="5">
+            <Label Margin="5" Width="150">Circuito</Label>
+            <TextBox Name="tbCircuito" IsReadOnly="True" />
+        </DockPanel>
+
+        <DockPanel Margin="5">
+            <Label Margin="5" Width="150">Fecha</Label>
+            <TextBox Name="tbFecha" IsReadOnly="True" />
+        </DockPanel>
+
+        <DockPanel
+            Margin="5">
+            <Label Margin="5" Width="150">Notas</Label>
+            <TextBox Name="tbNotas" Height="50" IsReadOnly="True" TextWrapping="Wrap" />
+        </DockPanel>
+
+        <Button Name="btExit" Content="Volver"/>
+    </StackPanel>
+
+
+</Window>
